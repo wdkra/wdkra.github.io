@@ -1,0 +1,14 @@
+hr {
+    background: #fff;
+    border-top: 2px #8c8b8b dashed;
+}
+
+.page {
+    width: 80%;
+    border: 1px solid rgba(200, 200, 200, .8);
+    background: rgba(254, 254, 254, .6);
+    box-shadow: 0px 0 3px 3px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0px 20px;
+}
