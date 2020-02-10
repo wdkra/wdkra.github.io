@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <!--引入http内容-->
+    <title>{{ page.title }}</title>
+    <script>
+        document.write("<link rel='stylesheet' type='text/css' href='/assets/style.css?random=" + Math.random() + "' />"); // 通过添加随机询问字符串避免浏览器缓存css
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+    <script>
+        if (!location.href.includes("https")) { window.location.href = "https" + location.href.substring(location.href.search("://")); } else { //这一行是https判断，一定要放在最前面
+            if (md5(prompt("Password")) != "acb0cac221eaae32a35ce636cb35f66d") {
+                location.reload()// 这里是密码输入错误发生的事情
+            } else {
+                console.log("这里填写密码输入成功发生的事情。这个console.log可以删除")
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a class="radio-button-on-outline" href="https://store.steampowered.com/" target="_blank">
+                    <ion-icon name="logo-steam-outline"></ion-icon>
+                </a>
+            </li>
+            <li><a class="radio-button-on-outline" href="https://www.google.cn/chrome/index.html" target="_blank">
+                    <ion-icon name="logo-chrome-outline"></ion-icon>
+                </a>
+            </li>
+            <li><a class="radio-button-on-outline" href="/">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </a>
+            </li>
+            <li><a class="radio-button-on-outline" href="/others/4_a_slam_dl.html" target="_blank">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </a>
+            </li>
+            <li><a class="radio-button-on-outline" href="/">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </a>
+            </li>
+            <li><a class="radio-button-on-outline" href="/">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </a>
+            </li>
+            <li><a class="radio-button-on-outline" href="/">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </a>
+            </li>
+            <li><a class="radio-button-on-outline" href="/">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <a class="btn"></a>
+    {{ content }}
+    <script type="text/javascript">
+        $('.btn').on('click', function () {
+            $('.btn').toggleClass('btnc');
+            $('.sidebar').toggleClass('side');
+        })
+    </script>
+</body>
+</html>
