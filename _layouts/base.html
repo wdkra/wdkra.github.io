@@ -30,11 +30,10 @@
         var currentUser = AV.User.current();
         if (currentUser) {
             alert(`欢迎您，${currentUser.getUsername()}！`)
-            $('body').css('display','block')
         } else {
             AV.User.logIn(prompt('Username'), prompt('Password')).then(function (user) {
                 alert('登陆成功！')
-                $('body').css('display','block')
+                $('body').css('display', 'block')
             }, function (error) {
                 alert("你脑子有wkr？账号密码都输不对。")
                 location.reload()
@@ -92,6 +91,9 @@
             $('.btn').toggleClass('btnc');
             $('.sidebar').toggleClass('side');
         })
+        if (currentUser) {
+            $('body').css('display', 'block')
+        }
     </script>
 </body>
 
