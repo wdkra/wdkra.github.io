@@ -34,7 +34,6 @@
             AV.User.logIn(prompt('Username'), prompt('Password')).then(function (user) {
                 alert('登陆成功！')
             }, function (error) {
-                alert('滚')
                 location.reload()
             });
         }
