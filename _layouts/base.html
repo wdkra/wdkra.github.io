@@ -30,6 +30,7 @@
         var currentUser = AV.User.current();
         if (currentUser) {
             alert(`欢迎您，${currentUser.getUsername()}！`)
+            $('body').css('display','block')
         } else {
             AV.User.logIn(prompt('Username'), prompt('Password')).then(function (user) {
                 alert('登陆成功！')
