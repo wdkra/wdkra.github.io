@@ -78,8 +78,8 @@
                     <ion-icon name="add-circle-outline"></ion-icon>
                 </a>
             </li>
-            <li><a class="radio-button-on-outline" href="/">
-                    <ion-icon name="add-circle-outline"></ion-icon>
+            <li><a id='logout'>
+                    <ion-icon name="exit-outline"></ion-icon>
                 </a>
             </li>
 
@@ -91,6 +91,10 @@
         $('.btn').on('click', function () {
             $('.btn').toggleClass('btnc');
             $('.sidebar').toggleClass('side');
+        })
+        $("#logout").click(function () {
+            AV.User.logOut()
+            location.reload()
         })
         if (currentUser) {
             $('body').css('display', 'block')

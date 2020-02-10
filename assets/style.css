@@ -52,10 +52,15 @@ body, html {
     background: #95a5a6;
 }
 
+.sidebar a {
+    cursor: pointer;
+}
+
 .btn {
     float: left;
     padding: 0 10px;
-    font-size: 30px; /* 侧边栏x的大小 */
+    font-size: 30px;
+    /* 侧边栏x的大小 */
     text-decoration: none;
     color: #2c3e50;
     font-family: Ionicons;
