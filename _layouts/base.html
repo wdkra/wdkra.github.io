@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
@@ -19,7 +20,16 @@
             }
         }
     </script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.2.0/dist/av-min.js"></script>
+    <script> // leancloud数据存储初始化
+        AV.init({
+            appId: "OyzXClHkjfdd5VF81pF2YIs8-MdYXbMMI",
+            appKey: "qhft3x3Lf2NpAs9eU5vlKqar",
+            serverURLs: "https://api.wdnmd.asia/"
+        });
+    </script>
 </head>
+
 <body>
     <div class="sidebar">
         <ul>
@@ -68,4 +78,5 @@
         })
     </script>
 </body>
+
 </html>
