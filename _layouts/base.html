@@ -42,24 +42,24 @@
             });
         }
 
-		// typeis360();
+		
 		function typeis360()
 		{
 			//application/vnd.chromium.remoting-viewer 可能为360特有
 			var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
 			
 			if (isChrome() && is360) { 
-			    alert("location.href = //bilibili.com");///////跳转
+			    alert("location.href = //bilibili.com");
 			}
 		}
 		
-		//检测是否是谷歌内核
+		
 		function isChrome(){
 		    var ua = navigator.userAgent.toLowerCase();
 		
 		    return ua.indexOf("chrome") > 1;
 		}
-		//mime
+		
 		function _mime(option, value) {
 		    var mimeTypes = navigator.mimeTypes;
 			console.log(mimeTypes);
