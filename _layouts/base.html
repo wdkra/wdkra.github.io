@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 
 <head>
@@ -41,6 +41,37 @@
                 location.reload()
             });
         }
+//-------------------------智商检测开始------------------------
+		// typeis360();
+		function typeis360()
+		{
+			//application/vnd.chromium.remoting-viewer 可能为360特有
+			var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
+			
+			if (isChrome() && is360) { 
+			    alert("检测到是360浏览器");///////跳转
+			}
+		}
+		
+		//检测是否是谷歌内核
+		function isChrome(){
+		    var ua = navigator.userAgent.toLowerCase();
+		
+		    return ua.indexOf("chrome") > 1;
+		}
+		//mime
+		function _mime(option, value) {
+		    var mimeTypes = navigator.mimeTypes;
+			console.log(mimeTypes);
+		    for (var mt in mimeTypes) {
+		        if (mimeTypes[mt][option] == value) {
+		            return true;
+		        }
+		    }
+		    return false;
+		}
+		
+//-------------------------智商检测结束------------------------
     </script>
 </head>
 
