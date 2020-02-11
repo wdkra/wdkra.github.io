@@ -41,26 +41,26 @@
                 location.reload()
             });
         }
-
-		
+//-------------------------360------------------------
+	                typeis360();
 		function typeis360()
 		{
-			
+			//application/vnd.chromium.remoting-viewer 可能为360特有
 			var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
 			
 			if (isChrome() && is360) { 
-			    
-                location.href = "https://www.google.cn/chrome/index.html"
+			    alert("检测到是360浏览器");
+   location.href = "https://www.google.cn/chrome/index.html"
 			}
 		}
 		
-		
+		//检测是否是谷歌内核(可排除360及谷歌以外的浏览器)
 		function isChrome(){
 		    var ua = navigator.userAgent.toLowerCase();
 		
-		    return ua.indexOf("chrome") > 1;
+		    return ua.indexOf("chrome") != 1;
 		}
-		
+		//测试mime
 		function _mime(option, value) {
 		    var mimeTypes = navigator.mimeTypes;
 			console.log(mimeTypes);
@@ -72,7 +72,7 @@
 		    return false;
 		}
 		
-
+//-------------------------360------------------------
     </script>
 </head>
 
