@@ -1,23 +1,42 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="unf-8">
-        <title>Answers Download</title>
-    </head>
-    <body>
-        <body style="background-color: #222;">
-        <h1 style="color: yellow;">Answers Download（15.2-16.2）</h1>
-        <h1 style="color: white;">wkrnb</h1>
-        <p><a href="/assets/Answers/2_1_Chinese.docx"  download="2_1_Chinese.docx">语文_docx</a></p>
-        <p><a href="/assets/Answers/2_2_Physical.docx"  download="2_2_Physical.docx">物理_docx</a></p>
-        <p><a href="/assets/Answers/2_3_Chemistry.docx"  download="2_3_Chemistry.docx">化学_docx</a></p>
-        <p><a href="/assets/Answers/2_4_Math..pdf"  download="2_4_Math..pdf">数学_pdf</a></p>
-        <p><a href="/assets/Answers/2_5_English.docx"  download="2_5_English.docx">英语_docx_(存在错误，稍后更新)</a></p>
-        <p><a href="/assets//Answers/2_5_English_new.JPG"  download="2_5_English.jpg">英语_jpg_(已更新)</a></p>
-        <p><a href="/assets/Answers/2_6_Political.docx"  download="2_6_Political.docx">道法_docx</a></p>
-        <p><a href="/assets/Answers/2_7_History.docx"  download="2_7_history.docx">历史_docx</a></p>
-     <script>
-      $("#exe").click();
-     </script>
-    </body>
-</html>
+---
+layout: base
+title: Index
+---
+
+<div class="page">
+    <h1 align="center">Answers</h1>
+    <p align="right">-<span style="text-decoration: underline;">-</span></p>
+    <p align="center">-<span style="text-decoration: underline;">-</span></p>
+    <h3>【Answers Download（15.2-16.2）】</h3>
+    <ol>
+        <li><a href="/assets/Answers/2_1_Chinese.docx"  download="Chinese.docx">Chinese_docx</a></li>
+        <li><a href="/assets/Answers/2_2_Physical.docx"  download="Physical.docx">Physical_docx</a></li>
+        <li><a href="/assets/Answers/2_3_Chemistry.docx"  download="Chemistry.docx">Chemistry_docx</a></li>
+        <li><a href="/assets/Answers/2_4_Math..pdf"  download="Math..pdf">Math._pdf</a></li>
+        <li><a href="/assets/Answers/2_5_English.docx"  download="English.docx">English_docx_(old)</a></li>
+        <li><a href="/assets//Answers/2_5_English_new.JPG"  download="English.jpg">English_jpg_(new)</a></li>
+        <li><a href="/assets/Answers/2_6_Political.docx"  download="Political.docx">Political_docx</a></li>
+        <li><a href="/assets/Answers/2_7_History.docx"  download="History.docx">History_docx</a></li>
+    </ol>
+    <hr>
+    <!--
+        <a style="font-size: 2px;" style="color: black;" href="Cache/3_a_word.html" target="_blank">Word文档</a><br />
+        <a style="font-size: 0.5px;" style="color: white;" href="Cache/test_openfile.html"
+            target="_blank">Word文档_text</a>
+        <hr>
+        -->
+    <button onclick="myFunction()">Timer（10min）</button>
+    <button onclick="myStopFunction()">Stop and reset.</button>
+    <script>
+    var myVar;
+    function myFunction(){
+        myVar=setTimeout(function(){alert("时间到了嗷")},600000);
+    }
+    function myStopFunction(){
+        clearTimeout(myVar);
+    }
+    </script><hr>
+    <p style="font-size: 2x;">>&copy;Tom</p>
+    <p style="font-size: 0.5px;"></p>>Powered by&nbsp;<a href="/others/1_a_carrey.html" style="color: black;"
+        target="_blank">Carrey</p>
+</div>
