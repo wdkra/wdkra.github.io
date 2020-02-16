@@ -48,13 +48,10 @@ title: Index
     <p style="font-size: 2x;">>&copy;Tom</p>
     <p style="font-size: 0.5px;"></p>>Powered by&nbsp;<a href="/others/1_a_carrey.html" style="color: black;"
         target="_blank">Carrey</p>
+    <button onclick="myFunction()">点我</button>
+    <script>
+        function myFunction(){
+            setTimeout(function(){alert("Hello")},3000);
+        }
+    </script>
 </div>
-<p>Pay attention to the time your mom comes home.</p>
-<script>
-    var myVar=setInterval(function(){myTimer()},1000);
-    function myTimer(){
-        var d=new Date();
-        var t=d.toLocaleTimeString();
-        document.getElementById("demo").innerHTML=t;
-    }
-</script>
