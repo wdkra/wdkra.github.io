@@ -45,13 +45,18 @@ title: Index
             target="_blank">Word文档_text</a>
         <hr>
         -->
+    <button onclick="myFunction()">Timer（10min）</button>
+    <button onclick="myStopFunction()">Stop and reset.</button>
+    <script>
+    var myVar;
+    function myFunction(){
+        myVar=setTimeout(function(){alert("时间到了嗷")},3000);
+    }
+    function myStopFunction(){
+        clearTimeout(myVar);
+    }
+    </script><hr>
     <p style="font-size: 2x;">>&copy;Tom</p>
     <p style="font-size: 0.5px;"></p>>Powered by&nbsp;<a href="/others/1_a_carrey.html" style="color: black;"
         target="_blank">Carrey</p>
-    <button onclick="myFunction()">点我</button>
-    <script>
-        function myFunction(){
-            setTimeout(function(){alert("Hello")},3000);
-        }
-    </script>
 </div>
