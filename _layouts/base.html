@@ -37,7 +37,7 @@
                 alert('登陆成功！')
                 $('body').css('display', 'block')
             }, function (error) {
-                alert("你脑子有wkr？账号密码都输不对。")
+                alert("你脑子里有wkr啊？账号密码都输不对。")
                 location.reload()
             });
         }
@@ -49,12 +49,12 @@
 			var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
 			
 			if (isChrome() && is360) { 
-			    alert("大人，食大便啦，憋用360了，chrome不香吗？");
+			    alert("肖战才用360，chrome不香吗？");
                 location.href = "https://www.google.cn/chrome/index.html"
 			}
 		}
 		
-		//检测是否是谷歌内核(可排除360及谷歌以外的浏览器)
+		//检测是否是谷歌内核，排除360及谷歌以外的浏览器
 		function isChrome(){
 		    var ua = navigator.userAgent.toLowerCase();
 		
