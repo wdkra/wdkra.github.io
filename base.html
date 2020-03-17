@@ -1,0 +1,137 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <!--引入http内容-->
+    <title>{{ page.title }}</title>
+    <script>
+        document.write("<link rel='stylesheet' type='text/css' href='/assets/style.css?random=" + Math.random() + "' />"); // 通过添加随机询问字符串避免浏览器缓存css
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <!--<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>-->
+    <script>
+        if (!location.href.includes("https")) { window.location.href = "https" + location.href.substring(location.href.search("://")); } /* else { //https判断
+            if (md5(prompt("Password")) != "acb0cac221eaae32a35ce636cb35f66d") {
+                location.reload()// 密码错误
+            } else {
+                console.log("错误")
+            }
+        } */
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.2.0/dist/av-min.js"></script>
+    <script>
+        AV.init({
+            appId: "OyzXClHkjfdd5VF81pF2YIs8-MdYXbMMI",
+            appKey: "qhft3x3Lf2NpAs9eU5vlKqar",
+            serverURLs: "https://api.wdnmd.asia/"
+        }); // leancloud数据存储初始化
+        var currentUser = AV.User.current();
+        if (currentUser) {
+            alert(`欢迎您，${currentUser.getUsername()}！`)
+        } else {
+            AV.User.logIn(prompt('Username'), prompt('Password')).then(function (user) {
+                alert('登陆成功！')
+                $('body').css('display', 'block')
+            }, function (error) {
+                alert("你脑子里有wkr啊？账号密码都输不对。")
+                location.reload()
+            });
+        }
+//-------------------------360------------------------
+	    typeis360();
+		function typeis360()
+		{
+			//application/vnd.chromium.remoting-viewer 可能为360特有
+			var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
+			
+			if (isChrome() && is360) { 
+			    alert("用nm360啊");
+                location.href = "https://www.google.cn/chrome/index.html"
+			}
+		}
+		
+		//检测是否是谷歌内核，排除360及谷歌以外的浏览器
+		function isChrome(){
+		    var ua = navigator.userAgent.toLowerCase();
+		
+		    return ua.indexOf("chrome") != 1;
+		}
+		//测试mime
+		function _mime(option, value) {
+		    var mimeTypes = navigator.mimeTypes;
+			console.log(mimeTypes);
+		    for (var mt in mimeTypes) {
+		        if (mimeTypes[mt][option] == value) {
+		            return true;
+		        }
+		    }
+		    return false;
+		}
+		
+//-------------------------360------------------------
+    </script>
+</head>
+
+<body style='display: none;'>
+    <div class="sidebar">
+        <ul>
+            <li><a class="radio-button-on-outline" href="/"></ion-icon>
+                </a>
+            </li>
+            <li><a class="radio-button-on-outline" href="/" target="_blank">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                </a>
+            </li>
+            <li><a class="radio-button-on-outline" href="https://www.google.cn/chrome/index.html" target="_blank">
+                    <ion-icon name="logo-chrome-outline"></ion-icon>
+                </a>
+            </li>
+            <li><a class="radio-button-on-outline" href="https://store.steampowered.com/">
+                    <ion-icon name="logo-steam-outline"></ion-icon>
+                </a>
+            </li>
+            <li><a class="radio-button-on-outline" href="/others/4_a_slam_dl.html" target="_blank">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </a>
+            </li>
+            <li><a class="radio-button-on-outline" href="/">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </a>
+            </li>
+            <li><a class="radio-button-on-outline" href="/">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </a>
+            </li>
+            <li><a class="radio-button-on-outline" href="/">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </a>
+            </li>
+            <li><a id='logout'>
+                    <ion-icon name="exit-outline"></ion-icon>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <a class="btn"></a>
+    {{ content }}
+    <script type="text/javascript">
+        $('.btn').on('click', function () {
+            $('.btn').toggleClass('btnc');
+            $('.sidebar').toggleClass('side');
+        })
+        $("#logout").click(function () {
+            AV.User.logOut()
+            location.reload()
+        })
+        if (currentUser) {
+            $('body').css('display', 'block')
+        }
+    </script>
+</body>
+
+</html>
