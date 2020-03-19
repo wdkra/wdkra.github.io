@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8" />
+   <title>UTC-8</title>
+ </head>
+ <body>
+   <div id="ddate"></div>
+    <script language="javascript">
+      var ddate=document.getElementById("ddate");
+      function updatedate()
+      {
+      var dd1=new Date();
+      dd1.setMinutes(dd1.getMinutes()+dd1.getTimezoneOffset()-300);
+      var tmin=dd1.getHours(); 
+      ddate.innerHTML='utc-8:'+dd1.getFullYear()+"."+(dd1.getMonth()+1)+"."+dd1.getDate()+"&nbsp;"+tmin+":"+dd1.getMinutes()+":"+dd1.getSeconds();
+       var t=setTimeout("updatedate()",1000);
+      }
+      updatedate();
+    </script>
+  </body>
+</html>

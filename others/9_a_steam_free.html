@@ -4,7 +4,7 @@ title: Index
 ---
 <div class="page">
     <h1 align="center">Index</h1>
-    <p align="center"><b>Click the links below you will leave wdnmd.asia.</b></p>
+    <p align="center" style="color: red; font-size: 20px;"><b>The following time points are <a href="/others/a_us_time.html">UTC-8 time</a>, not UTC+8.</b></p>
     <p align="center"><b>早买早享受，晚买免费送 :)</b></p>
     <h3>【News】</h3>
     <ol>
@@ -47,4 +47,15 @@ title: Index
     {
         window.open("mailto:wudickray@outlook.com");
     }
+    var ddate=document.getElementById("ddate");
+    function Utcminus8TimeDis()()
+    {
+        var dd1=new Date();
+        dd1.setMinutes(dd1.getMinutes()+dd1.getTimezoneOffset()-300);
+        var tmin=dd1.getHours();
+            ddate.innerHTML='UTC-8:'+dd1.getFullYear()+"."+(dd1.getMonth()+1)+"."+dd1.getDate()+"&nbsp;"+tmin+":"+dd1.getMinutes()+":"+dd1.getSeconds();
+        var t=setTimeout("updatedate()",1000);
+        alert("updatedate()",1000)
+    }
+    updatedate();
 </script>
