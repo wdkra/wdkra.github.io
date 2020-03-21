@@ -14,7 +14,7 @@
       dd1.setMinutes(dd1.getMinutes()+dd1.getTimezoneOffset()-300);
       var tmin=dd1.getHours(); 
       ddate.innerHTML='utc-8:'+dd1.getFullYear()+"."+(dd1.getMonth()+1)+"."+dd1.getDate()+"&nbsp;"+tmin+":"+dd1.getMinutes()+":"+dd1.getSeconds();
-       var t=setTimeout("updatedate()",1000);
+      var t=setTimeout("updatedate()",1000);
       }
       updatedate();
     </script>
