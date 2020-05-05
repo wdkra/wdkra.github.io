@@ -92,10 +92,12 @@ hr {
 
 a:link{
     color: black;
+    text-decoration:none;
 }
 
 a:visited{
     color: black;
+    text-decoration:none;
 }
 
 a:hover{
@@ -104,6 +106,5 @@ a:hover{
 }
         
 p::selection{
-    text-decoration:underline;
     background-color: yellow;
 }
