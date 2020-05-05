@@ -89,3 +89,21 @@ hr {
     max-width: 800px;
     padding: 0px 20px;
 }
+
+a:link{
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+a:hover{
+    color: black;
+    background-color: greenyellow;
+}
+        
+p::selection{
+    text-decoration:underline;
+    background-color: yellow;
+}
