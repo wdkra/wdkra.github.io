@@ -108,3 +108,7 @@ a:hover{
 p::selection{
     background-color: yellow;
 }
+
+class.ColorGray{
+    color: gray;
+}
