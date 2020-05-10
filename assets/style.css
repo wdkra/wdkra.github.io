@@ -109,6 +109,6 @@ p::selection{
     background-color: yellow;
 }
 
-class.ColorGray{
+.ColorGray{
     color: gray;
 }
