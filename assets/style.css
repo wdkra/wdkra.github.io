@@ -90,6 +90,10 @@ hr {
     padding: 0px 20px;
 }
 
+.annotate {
+    font-size: xx-small;
+}
+
 a:link{
     color: black;
     text-decoration:none;
