@@ -1,4 +1,6 @@
 @import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+*{font-family: Arial, Helvetica, sans-serif;}
+
 body, html {
     margin: 0;
     padding: 0;

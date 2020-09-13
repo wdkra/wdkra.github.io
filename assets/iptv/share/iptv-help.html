@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>IPTV</title>
+        <style>
+            @import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+            body, html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+                font-family: sans-serif;
+            }
+
+            .sidebar {
+                float: left;
+                width: 100px;
+                margin-left: -100px;
+                height: 100%;
+                background-color: #2c3e50;
+                overflow: hidden;
+                transition: 0.8s all;
+            }
+
+            .side {
+                margin-left: 0;
+            }
+
+            .sidebar ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            .sidebar ul li {
+                list-style: none;
+            }
+
+            .sidebar ul li a {
+                text-decoration: none;
+                color: white;
+                height: 80px;
+                width: 100%;
+                font-size: 40px;
+                line-height: 80px;
+                text-align: center;
+                display: block;
+                transition: 0.6s all;
+            }
+
+            .sidebar ul li a:hover {
+                background: #95a5a6;
+            }
+
+            .sidebar a {
+                cursor: pointer;
+            }
+
+            .btn {
+                float: left;
+                padding: 0 10px;
+                font-size: 30px;
+                text-decoration: none;
+                color: #2c3e50;
+                font-family: Ionicons;
+                cursor: pointer;
+            }
+
+            .btn:before {
+                content: '\f20d';
+            }
+
+            .btnc:before {
+                content: '\f12a';
+            }
+
+            hr {
+                background: #fff;
+                border-top: 2px #8c8b8b dashed;
+            }
+
+            .page {
+                width: 80%;
+                border: 1px solid rgba(200, 200, 200, .8);
+                background: rgba(254, 254, 254, .6);
+                box-shadow: 0px 0 3px 3px rgba(0, 0, 0, 0.1);
+                margin: 10px auto;
+                max-width: 800px;
+                padding: 0px 20px;
+            }
+
+            .annotate {
+                font-size: x-small;
+            }
+
+            a:link{
+                color: black;
+                text-decoration:none;
+            }
+
+            a:visited{
+                color: black;
+                text-decoration:none;
+            }
+
+            a:hover{
+                color: black;
+                background-color: greenyellow;
+            }
+                    
+            p::selection{
+                background-color: yellow;
+            }
+
+            .ColorGray{
+                color: gray;
+            }
+        </style>
+    </head>
+    <body style='display: none;'>
+        <div class="sidebar">
+            <ul>
+                <li><a class="radio-button-on-outline" href="/"></ion-icon>
+                    </a>
+                </li>
+                <li><a class="radio-button-on-outline" href="/" target="_blank">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                    </a>
+                </li>
+                <li><a class="radio-button-on-outline" href="https://www.google.cn/chrome/index.html" target="_blank">
+                        <ion-icon name="logo-chrome-outline"></ion-icon>
+                    </a>
+                </li>
+                <li><a class="radio-button-on-outline" href="https://store.steampowered.com/">
+                        <ion-icon name="logo-steam-outline"></ion-icon>
+                    </a>
+                </li>
+                <li><a class="radio-button-on-outline" href="/others/4_a_slam_dl.html" target="_blank">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                    </a>
+                </li>
+                <li><a class="radio-button-on-outline" href="/">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                    </a>
+                </li>
+                <li><a class="radio-button-on-outline" href="/">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                    </a>
+                </li>
+                <li><a class="radio-button-on-outline" href="/">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                    </a>
+                </li>
+                <li><a id='logout'>
+                        <ion-icon name="exit-outline"></ion-icon>
+                    </a>
+                </li>
+    
+            </ul>
+        </div>
+        <a class="btn"></a>
+        {{ content }}
+        <script type="text/javascript">
+            $('.btn').on('click', function () {
+                $('.btn').toggleClass('btnc');
+                $('.sidebar').toggleClass('side');
+            })
+            $("#logout").click(function () {
+                AV.User.logOut()
+                location.reload()
+            })
+            if (currentUser) {
+                $('body').css('display', 'block')
+            }
+        </script>
+    </body>
+</html>
